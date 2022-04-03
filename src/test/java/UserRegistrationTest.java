@@ -23,4 +23,14 @@ public class UserRegistrationTest {
         boolean result = userRegistration.emailValidation("Lucky..@yahoo.com");
         Assert.assertFalse(result);
     }
+    @Test
+    public void giveNumberValue_WhenProper_ShouldReturnTrue(){
+        boolean result = userRegistration.numberValidation("91 0123456789");
+        Assert.assertTrue(result);
+    }
+    @Test
+    public void givenNumberValues_WhenNotProper_ShouldReturnFalse(){
+        boolean result = userRegistration.numberValidation("91 08450911877");
+        Assert.assertFalse(result);
+    }
 }

@@ -31,4 +31,13 @@ public class UserRegistrationMain {
         matcher = pattern.matcher(Email);
         return matcher.matches();
     }
+    /* method  numberValidationto validate phone no format
+     * @param PhoneNo return boolean value
+     */
+    public boolean numberValidation(String PhoneNo){
+        String regx = "^[0-9]{2}\\s[0-9]{10}";
+        pattern = Pattern.compile(regx);
+        matcher = pattern.matcher(PhoneNo);
+        return matcher.matches();
+    }
 }
