@@ -98,5 +98,4 @@ public class UserRegistrationMain {
         Matcher matcher = pattern.matcher(emailId);
         return matcher.matches();
     }
-
 }
