@@ -22,4 +22,13 @@ public class UserRegistrationMain {
         matcher = pattern.matcher(name);
         return matcher.matches();
     }
+    /* method emailValidation to validate email format0
+       @param name return boolean value
+     */
+    public boolean emailValidation(String Email){
+        String regx = "^[a-z0-9]{3,}+([_+-.][a-z0-9]{3,}+)*@[a-z0-9]+.[a-z]{2,3}+(.[a-z][2,3]){0,1}$";
+        pattern = Pattern.compile(regx);
+        matcher = pattern.matcher(Email);
+        return matcher.matches();
+    }
 }
